@@ -1,5 +1,5 @@
-import 'package:cozo/src/core/supabase.dart';
-import 'package:cozo/src/features/splash/presentation/views/splash.dart';
+import 'package:cozo/src/core/utils/supabase_info.dart';
+import 'package:cozo/src/features/auth/presentation/views/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -18,8 +18,17 @@ class Cozo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: SplashScreen(),
+    return MaterialApp(
+      theme: ThemeData.light().copyWith(
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(foregroundColor: Colors.white),
+        ),
+        textButtonTheme: TextButtonThemeData(
+            style: TextButton.styleFrom(foregroundColor: Colors.black)),
+        scaffoldBackgroundColor: Colors.black,
+        textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Tajawal'),
+      ),
+      home: LoginScreen(),
     );
   }
 }
