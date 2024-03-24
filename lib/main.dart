@@ -1,5 +1,5 @@
+import 'package:cozo/src/core/utils/app_router.dart';
 import 'package:cozo/src/core/utils/supabase_info.dart';
-import 'package:cozo/src/features/auth/presentation/views/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -28,7 +28,8 @@ class Cozo extends StatelessWidget {
         scaffoldBackgroundColor: Colors.black,
         textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Tajawal'),
       ),
-      home: LoginScreen(),
+      routes: AppRouter.routes,
+      initialRoute: AppRouter.login,
     );
   }
 }

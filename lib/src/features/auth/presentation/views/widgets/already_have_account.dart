@@ -1,8 +1,8 @@
 import 'package:cozo/src/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 
-class SignUpNow extends StatelessWidget {
-  const SignUpNow({
+class AlreadyHaveAccount extends StatelessWidget {
+  const AlreadyHaveAccount({
     super.key,
   });
 
@@ -13,15 +13,15 @@ class SignUpNow extends StatelessWidget {
       children: [
         TextButton(
           onPressed: () {
-            Navigator.pushNamed(context, AppRouter.signUp);
+            Navigator.pushReplacementNamed(context, AppRouter.login);
           },
           child: const Text(
-            'سجل الان',
+            'تسجيل الدخول',
             textDirection: TextDirection.rtl,
           ),
         ),
         const Text(
-          'مستخدم جديد؟',
+          'لديك حساب بالفعل؟',
           textDirection: TextDirection.rtl,
         ),
       ],
