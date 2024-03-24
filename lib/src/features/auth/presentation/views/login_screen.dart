@@ -19,45 +19,48 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           children: [
             const Logo(),
-            Text('أهلا بك'),
-            Text('سجل دخولك بأحدى الطرق '),
+            const Text(
+              'أهلا بك',
+              style: Styles.s20w,
+            ),
+            const Text('سجل دخولك بأحدى الطرق ', style: Styles.s20w),
+            const SizedBox(
+              height: 30,
+            ),
             Container(
               decoration: const BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20))),
+                  borderRadius: BorderRadius.all(Radius.circular(20))),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 25,
                   ),
-                  Text(
-                    'سجل باستخدام بريدك الالكتروني',
-                    style: Styles.s18,
-                  ),
-                  SizedBox(
+                  const Text('سجل باستخدام بريدك الالكتروني',
+                      style: Styles.s20b),
+                  const SizedBox(
                     height: 25,
                   ),
                   AuthTextField(
-                    hint: 'مثال: abcd@mail.com',
+                    hint: '  مثال: abcd@mail.com',
                     textInputType: TextInputType.emailAddress,
                     label: 'البريد الالكتروني',
                   ),
                   AuthTextField(
                     textInputType: TextInputType.text,
                     label: 'كلمة المرور',
+                    addObscure: true,
                   ),
-                  ForgetPasswordButton(),
+                  const ForgetPasswordButton(),
                   AuthButton(
                     label: 'تسجيل الدخول',
                     onPressed: () {},
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Row(
+                  const Row(
                     children: [
                       Expanded(
                         child: Padding(
@@ -90,7 +93,10 @@ class LoginScreen extends StatelessWidget {
                     onPressed: () {},
                     iconPath: 'assets/images/google.png',
                   ),
-                  const SignUpNow()
+                  const SignUpNow(),
+                  const SizedBox(
+                    height: 10,
+                  )
                 ],
               ),
             ),

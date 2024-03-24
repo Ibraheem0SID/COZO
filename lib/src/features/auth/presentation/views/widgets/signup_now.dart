@@ -21,9 +21,6 @@ class SignUpNow extends StatelessWidget {
           'مستخدم جديد؟',
           textDirection: TextDirection.rtl,
         ),
-        SizedBox(
-          width: 5,
-        ),
       ],
     );
   }

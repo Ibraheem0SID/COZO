@@ -1,3 +1,4 @@
+import 'package:cozo/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/responsive.dart';
@@ -32,6 +33,7 @@ class AuthButton extends StatelessWidget {
           children: [
             Text(
               label,
+              style: Styles.s16,
             ),
             (iconPath != null)
                 ? Padding(
