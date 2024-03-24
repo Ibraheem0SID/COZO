@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 class Styles {
-  static TextStyle s18 = TextStyle(
+  static TextStyle? s18 = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w600,
   );

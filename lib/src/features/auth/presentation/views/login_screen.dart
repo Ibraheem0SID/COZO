@@ -1,3 +1,4 @@
+import 'package:cozo/src/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/auth_button.dart';
@@ -20,9 +21,6 @@ class LoginScreen extends StatelessWidget {
             const Logo(),
             Text('أهلا بك'),
             Text('سجل دخولك بأحدى الطرق '),
-            const SizedBox(
-              height: 30,
-            ),
             Container(
               decoration: const BoxDecoration(
                   color: Colors.white,
@@ -35,7 +33,10 @@ class LoginScreen extends StatelessWidget {
                   SizedBox(
                     height: 25,
                   ),
-                  Text('سجل باستخدام بريدك الالكتروني'),
+                  Text(
+                    'سجل باستخدام بريدك الالكتروني',
+                    style: Styles.s18,
+                  ),
                   SizedBox(
                     height: 25,
                   ),
